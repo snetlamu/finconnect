@@ -124,6 +124,10 @@ function App() {
     axios.get('/portfolio')
   }
 
+  const getNews = () => {
+    axios.get('/news')
+  }
+
   useEffect(() => {
     const fetchGainers = async () => {
       try {
@@ -201,7 +205,7 @@ function App() {
         <div className="flex-1" style={{ margin: "auto", padding: "0em 5em", width: "30%", minWidth: "500px" }}>
           <Dialog>
             <DialogTrigger style={{ width: "100%" }}>
-              <Card style={{ height: "100%" }} onClick={getPortfolio} className="flex flex-col hover:bg-secondary/90">
+              <Card style={{ height: "100%" }} onClick={() => { getPortfolio() }} className="flex flex-col hover:bg-secondary/90">
                 <CardHeader className="flex-row items-start space-y-0 pb-0">
                   <div className="grid gap-1">
                     <CardTitle>Portfolio</CardTitle>
@@ -299,7 +303,7 @@ function App() {
         <div className="flex-1 h-full" style={{ margin: "auto", padding: "0em 5em", width: "30%", minWidth: "500px", height: "auto" }}>
           <Drawer>
             <DrawerTrigger style={{ width: "100%", height: "100%" }}>
-              <Card style={{ height: "100%" }} className="flex flex-col hover:bg-secondary/90">
+              <Card style={{ height: "100%" }} onClick={() => { getNews() }} className="flex flex-col hover:bg-secondary/90">
                 <CardHeader className="flex-row items-start space-y-0 pb-0">
                   <div className="grid gap-1">
                     <CardTitle>Business Updates</CardTitle>
