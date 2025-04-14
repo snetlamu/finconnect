@@ -1,0 +1,8 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- White filled circle -->
+  <circle cx="100" cy="100" r="90" fill="#0e2014" />
+  <!-- Green border circle -->
+  <circle cx="100" cy="100" r="90" stroke="green" stroke-width="10" fill="none" />
+  <!-- Larger and thicker dollar sign -->
+  <text x="50%" y="50%" font-size="150" text-anchor="middle" fill="green" dy=".35em" font-weight="bolder" font-family="Arial">$</text>
+</svg>
