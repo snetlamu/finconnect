@@ -46,7 +46,7 @@ func initMongo() {
 		log.Fatalf("MongoDB connection error: %v", err)
 	}
 
-	collection = client.Database("mydb").Collection("stockData")
+	collection = client.Database("finconnect").Collection("stockData")
 }
 
 func getStockData(c *gin.Context) {

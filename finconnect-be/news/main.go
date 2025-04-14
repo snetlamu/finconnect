@@ -46,7 +46,7 @@ func initMongo() {
 	}
 
 	// Connect to the newsData collection
-	newsCollection = client.Database("mydb").Collection("newsData")
+	newsCollection = client.Database("finconnect").Collection("newsData")
 }
 
 func getNewsData(c *gin.Context) {
