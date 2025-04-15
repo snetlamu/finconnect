@@ -26,7 +26,7 @@ type Stock struct {
 var collection *mongo.Collection
 
 func initMongo() {
-	err := godotenv.Load()
+	err := godotenv.Load("/home/ubuntu/finconnect/finconnect-be/portfolio/.env")
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}

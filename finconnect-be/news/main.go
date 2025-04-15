@@ -25,7 +25,7 @@ type NewsItem struct {
 var newsCollection *mongo.Collection
 
 func initMongo() {
-	err := godotenv.Load()
+	err := godotenv.Load("/home/ubuntu/finconnect/finconnect-be/news/.env")
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
