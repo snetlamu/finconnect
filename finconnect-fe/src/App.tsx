@@ -213,7 +213,7 @@ function App() {
                   </div>
                 </CardHeader>
                 <CardContent className="flex justify-center">
-                  <img style={{ marginTop: "-1em" }} width="100px" src={"/portfolio.svg"} />
+                  <img style={{ marginTop: "-1em" }} width="100px" src={"/icon-portfolio.svg"} />
                 </CardContent>
               </Card>
             </DialogTrigger>
@@ -288,7 +288,7 @@ function App() {
                   </div>
                 </CardHeader>
                 <CardContent className="flex justify-center">
-                  <img style={{ marginTop: "-1em" }} width="100px" src={"/scanner.svg"} />
+                  <img style={{ marginTop: "-1em" }} width="100px" src={"/icon-scanner.svg"} />
                 </CardContent>
               </Card>
             </DialogTrigger>
@@ -311,7 +311,7 @@ function App() {
                   </div>
                 </CardHeader>
                 <CardContent className="flex justify-center">
-                  <img style={{ marginTop: "-1em" }} width="100px" src={"/news.svg"} />
+                  <img style={{ marginTop: "-1em" }} width="100px" src={"/icon-news.svg"} />
                 </CardContent>
               </Card>
             </DrawerTrigger>
