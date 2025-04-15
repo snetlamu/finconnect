@@ -76,8 +76,8 @@ func main() {
 
 	router.GET("/portfolio", getStockData)
 
-	log.Println("Server running on port 8000")
-	err := router.Run(":8000")
+	log.Println("Server running on port 5000")
+	err := router.Run(":5000")
 	if err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
