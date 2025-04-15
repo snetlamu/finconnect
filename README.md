@@ -3,8 +3,8 @@
 ## Steps to Host the Front-End Code
 1. ``` git clone https://github.com/snetlamu/finconnect.git ```
 2. ```sudo cp -r finconnect/finconnect-fe/dist/* /var/www/html/```
-3. ```sudo sed -i '/server {/a\\tlocation /portfolio {\n\t\tproxy_pass http://${portfolio_server_ip}:5000;\n\t\tproxy_set_header Host $host;\n\t\tproxy_set_header X-Real-IP $remote_addr;\n\t\tproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n\t\tproxy_set_header X-Forwarded-Proto $scheme;\n\t}' /etc/nginx/sites-available/default && sudo nginx -t && sudo systemctl reload nginx```
-4. ```sudo sed -i '/server {/a\\tlocation /news {\n\t\tproxy_pass http://${news_server_ip}:7000;\n\t\tproxy_set_header Host $host;\n\t\tproxy_set_header X-Real-IP $remote_addr;\n\t\tproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n\t\tproxy_set_header X-Forwarded-Proto $scheme;\n\t}' /etc/nginx/sites-available/default && sudo nginx -t && sudo systemctl reload nginx```
+3. ```sudo sed -i '0,/server {/a\\tlocation /portfolio {\n\t\tproxy_pass http://${portfolio_server_ip}:5000;\n\t\tproxy_set_header Host $host;\n\t\tproxy_set_header X-Real-IP $remote_addr;\n\t\tproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n\t\tproxy_set_header X-Forwarded-Proto $scheme;\n\t}' /etc/nginx/sites-available/default && sudo nginx -t && sudo systemctl reload nginx```
+4. ```sudo sed -i '0,/server {/a\\tlocation /news {\n\t\tproxy_pass http://${news_server_ip}:7000;\n\t\tproxy_set_header Host $host;\n\t\tproxy_set_header X-Real-IP $remote_addr;\n\t\tproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n\t\tproxy_set_header X-Forwarded-Proto $scheme;\n\t}' /etc/nginx/sites-available/default && sudo nginx -t && sudo systemctl reload nginx```
 
 ## Steps to Host the Back-End Code
 ### Portfolio
