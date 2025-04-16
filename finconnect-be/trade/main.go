@@ -28,7 +28,7 @@ type TradeItem struct {
 var tradeCollection *mongo.Collection
 
 func initMongo() {
-	err := godotenv.Load("/home/ubuntu/finconnect/finconnect-be/news/.env")
+	err := godotenv.Load("/home/ubuntu/finconnect/finconnect-be/trade/.env")
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}

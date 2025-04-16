@@ -28,7 +28,7 @@ type ScreenerItem struct {
 var screenerCollection *mongo.Collection
 
 func initMongo() {
-	err := godotenv.Load("/home/ubuntu/finconnect/finconnect-be/news/.env")
+	err := godotenv.Load("/home/ubuntu/finconnect/finconnect-be/screener/.env")
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
