@@ -122,10 +122,15 @@ function App() {
 
   const getPortfolio = () => {
     axios.get('/portfolio')
+    axios.get('/trades')
   }
 
   const getNews = () => {
     axios.get('/news')
+  }
+
+  const getScreenerData = () => {
+    axios.get('/screener')
   }
 
   useEffect(() => {
@@ -280,7 +285,7 @@ function App() {
         <div className="flex-1" style={{ margin: "auto", padding: "0em 5em", width: "30%", minWidth: "500px" }}>
           <Dialog>
             <DialogTrigger style={{ width: "100%" }}>
-              <Card style={{ height: "100%" }} className="flex flex-col hover:bg-secondary/90">
+              <Card style={{ height: "100%" }} onClick={() => { getScreenerData() }} className="flex flex-col hover:bg-secondary/90">
                 <CardHeader className="flex-row items-start space-y-0 pb-0">
                   <div className="grid gap-1">
                     <CardTitle>Screener</CardTitle>
